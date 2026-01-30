@@ -9,21 +9,43 @@ namespace COMP003A.Assignment3
             Console.WriteLine("=== Academic & Personal Readiness Evaluator ===");
             
             //Behavior 1 time based readiness
-            
-            
-            
+            int currentYear = DateTime.Now.Year;
+            Console.WriteLine("Current Year: " + currentYear);
+
+            Console.Write("Enter your year of birth: ");
+            int yearOfBirth = int.Parse(Console.ReadLine());
+
+            int age = currentYear - yearOfBirth;
+            Console.WriteLine("User Age: " + age);
+
+            string ageCategory;
+            if (age < 18)
+            {
+                ageCategory = "Minor";
+            }
+            else if (age >= 18 && age <= 64)
+            {
+                ageCategory = "Adult";
+            }
+            else
+            {
+                ageCategory = "Senior";
+            }
+
+            Console.WriteLine("Readiness Category: " + ageCategory);
+
             //Behavior 2 multi rules based readiness
-            
-            
-            
+
+
+
             //Mandatory rule
-            
-            
-            
+
+
+
             //Behavior 3 guidance selection
-            
-            
-            
+
+
+
         }
     }
 }
