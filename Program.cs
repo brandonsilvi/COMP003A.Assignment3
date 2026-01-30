@@ -7,7 +7,7 @@ namespace COMP003A.Assignment3
         static void Main(string[] args)
         {
             Console.WriteLine("=== Academic & Personal Readiness Evaluator ===");
-            
+
             //Behavior 1 time based readiness
             int currentYear = DateTime.Now.Year;
             Console.WriteLine("Current Year: " + currentYear);
@@ -38,7 +38,7 @@ namespace COMP003A.Assignment3
 
             Console.Write("Do you have a valid ID? (yes/no): ");
             bool isValidID = Console.ReadLine().ToLower() == "yes";
-            
+
             Console.Write("Have you completed orientation? (yes/no): ");
             bool completedOrientation = Console.ReadLine().ToLower() == "yes";
 
@@ -66,9 +66,32 @@ namespace COMP003A.Assignment3
 
 
             //Behavior 3 guidance selection
+            Console.WriteLine("\nSelect a guidance option:");
+            Console.WriteLine("1 - Academic Planning");
+            Console.WriteLine("2 - Personal Planning");
+            Console.WriteLine("3 - Career Planning");
+            Console.Write("Enter Choice (1/2/3): ");
 
-
-
+            int choice = int.Parse(Console.ReadLine());
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("Meet with an Academic Advisor to plan your next term");
+                    break;
+                case 2:
+                    Console.WriteLine("Review your personal goals and create a time management plan");
+                    break;
+                case 3:
+                    Console.WriteLine("Explore career options and update your resume");
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice, restart the program and make a valid selection");
+                    break;
+            }
         }
     }
+
+
+
 }
+    
