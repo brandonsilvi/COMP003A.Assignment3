@@ -44,8 +44,25 @@ namespace COMP003A.Assignment3
 
             string readinessCategory;
             //Mandatory rule
-            
-            //Optional rule
+            if (ageCategory == "Adult" && isValidID)
+            {
+                //Optional rule
+                if (completedOrientation)
+                {
+                    readinessCategory = "Ready";
+                }
+                else
+                {
+                    readinessCategory = "Conditionally Ready";
+                }
+
+            }
+            else
+            {
+                readinessCategory = "Not Ready";
+            }
+
+            Console.WriteLine("Readiness Category: " + readinessCategory);
 
 
             //Behavior 3 guidance selection
