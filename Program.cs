@@ -36,10 +36,16 @@ namespace COMP003A.Assignment3
 
             //Behavior 2 multi rules based readiness
 
+            Console.Write("Do you have a valid ID? (yes/no): ");
+            bool isValidID = Console.ReadLine().ToLower() == "yes";
+            
+            Console.Write("Have you completed orientation? (yes/no): ");
+            bool completedOrientation = Console.ReadLine().ToLower() == "yes";
 
-
+            string readinessCategory;
             //Mandatory rule
-
+            
+            //Optional rule
 
 
             //Behavior 3 guidance selection
